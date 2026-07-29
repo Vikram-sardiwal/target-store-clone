@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 import Offer from "../components/Offer";
 import Ads from "../components/Ads";
 import Images from "../components/Images";
-import OfferSection from "../components/Offersection";
+import OfferSection from "../components/OfferSection";
 import PromoSectionOne from "../components/PromoSectionOne";
 import FeaturedCategories from "../components/FeaturedCategories";
 import ShowcaseSection from "../components/ShowcaseSection";
