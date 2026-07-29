@@ -13,7 +13,6 @@ export default function Deals() {
       <DealSign />
       <ShopByCategory />
       <Ads />
-      
 
       <Footer />
     </>

@@ -1,4 +1,5 @@
 import ShopByCategoryCard from "./ShopByCategoryCard";
+
 import img1 from "../assetsOne/clearance138104-180815_1534365588269.webp";
 import img2 from "../assetsOne/GUEST_3d687ca4-8572-4059-84a6-1d844aff4b1a.webp";
 import img3 from "../assetsOne/GUEST_4e048cd8-a365-4162-b95c-f8a6d4995469.webp";
@@ -89,8 +90,19 @@ const offer = [
 
 export default function ShopByCategory() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8">
-      <div className="grid grid-cols-6 gap-10">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div
+        className="
+          grid
+          grid-cols-2
+          sm:grid-cols-3
+          md:grid-cols-4
+          lg:grid-cols-6
+          gap-5
+          sm:gap-6
+          md:gap-8
+        "
+      >
         {offer.map((item) => (
           <ShopByCategoryCard
             key={item.id}
