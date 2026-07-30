@@ -15,6 +15,7 @@ const offers = [
     desc: "Trend-forward elevated essentials.",
     bgColor: "bg-[#F5E7D5]",
     textColor: "text-black",
+    link: "/offer/1",
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const offers = [
     desc: "Bedding & loungewear.",
     bgColor: "bg-[#042B45]",
     textColor: "text-white",
+    link: "/offer/2",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const offers = [
     desc: "Trend-forward elevated essentials.",
     bgColor: "bg-[#F5E7D5]",
     textColor: "text-black",
+    link: "/offer/3",
   },
   {
     id: 4,
@@ -39,6 +42,7 @@ const offers = [
     desc: "Bedding & loungewear.",
     bgColor: "bg-[#042B45]",
     textColor: "text-white",
+    link: "/offer/4",
   },
   {
     id: 5,
@@ -47,6 +51,7 @@ const offers = [
     desc: "Trend-forward elevated essentials.",
     bgColor: "bg-[#F5E7D5]",
     textColor: "text-black",
+    link: "/offer/5",
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ const offers = [
     desc: "Trend-forward elevated essentials.",
     bgColor: "bg-[#F5E7D5]",
     textColor: "text-black",
+    link: "/offer/6",
   },
 ];
 
@@ -70,6 +76,7 @@ export default function OfferSection() {
             desc={item.desc}
             bgColor={item.bgColor}
             textColor={item.textColor}
+            link={item.link}
           />
         ))}
       </div>

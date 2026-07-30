@@ -11,6 +11,9 @@ import Profile from "./pages/Profile";
 import Checkout from "./pages/Checkout";
 
 import CategoryDetail from "./components/CategoryDetail";
+import OfferPage from "./components/OfferPage";
+import Offer from "./components/Offer";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
@@ -29,6 +32,11 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/category/:slug" element={<CategoryDetail />} />
+        <Route path="/offer/:id" element={<OfferPage />} />
+         <Route path="/offer/:id" element={<Offer />} />
+           <Route path="/offer/:id" element={<ProductCard />} />
+
+    
       </Routes>
     </>
   );
