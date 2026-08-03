@@ -12,6 +12,7 @@ export default function LoginForm() {
   function handlesubmit() {
     if (number.length === 10) {
       setError("");
+      setNumber("");
       console.log("success");
     } else {
       setError("pls valid 10 digit number");
