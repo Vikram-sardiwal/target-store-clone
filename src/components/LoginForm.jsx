@@ -2,13 +2,21 @@ import { useState } from "react";
 import img from "../assets/bullseye-tm.svg";
 
 export default function LoginForm() {
-  const [number, setNumber] = useState({
-    number: "",
-  });
+  const [number, setNumber] = useState("");
+  const [error, setError] = useState("");
 
   const inpNumber = (e) => {
-    setNumber({ ...number, [e.target.name]: e.target.value });
+    setNumber(e.target.value);
   };
+
+  function handlesubmit() {
+    if (number.length === 10) {
+      setError("");
+      console.log("success");
+    } else {
+      setError("pls valid 10 digit number");
+    }
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 py-6 text-center">
@@ -24,27 +32,30 @@ export default function LoginForm() {
 
       <input
         className="w-full max-w-xs sm:max-w-sm text-sm px-3 py-2 border border-gray-800 rounded-xl"
-        type="text"
+        type="tel"
         placeholder="Enter your mobile number"
         name="number"
-        value={number.number}
+        value={number}
         onChange={inpNumber}
       />
+      {error && (
+        <p className="text-red-600 text-sm sm:text-base md:text-lg mt-2 px-2 text-center">
+          {error}
+        </p>
+      )}
 
       <button
         className="text-lg sm:text-2xl bg-red-500 p-3 m-4 sm:m-5 text-white rounded-4xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent w-full max-w-xs sm:max-w-sm sm:w-64"
-        onClick={() => {
-          console.log(number);
-        }}
+        onClick={handlesubmit}
       >
         Continue
       </button>
 
-      <p className="text-base sm:text-xl font-bold">___________or_____________</p>
+      <p className="text-base sm:text-xl font-bold">
+        ___________or_____________
+      </p>
 
-      <button
-        className="text-lg sm:text-2xl bg-red-500 p-3 m-4 sm:m-5 text-white rounded-4xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent w-full max-w-xs sm:max-w-sm sm:w-64"
-      >
+      <button className="text-lg sm:text-2xl bg-red-500 p-3 m-4 sm:m-5 text-white rounded-4xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent w-full max-w-xs sm:max-w-sm sm:w-64">
         Sign in with Passkey
       </button>
 

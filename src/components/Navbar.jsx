@@ -1,75 +1,3 @@
-// import { Link } from "react-router-dom";
-// import img from "../assets/bullseye-tm.svg";
-// import { FiSearch } from "react-icons/fi";
-// import { FaUser } from "react-icons/fa";
-// import { FiShoppingCart } from "react-icons/fi";
-// import { FiLogIn } from "react-icons/fi";
-
-// import { IoVolumeMediumOutline } from "react-icons/io5";
-
-// export default function Navbar() {
-//   return (
-//     <nav className="flex justify-between items-center px-4 py-2 bg-gray-800 text-white">
-//       <Link to="/">
-//         <img src={img} alt="Target Logo" className="w-16 h-16 object-contain" />
-//       </Link>
-
-//       <Link to="/" className="hover:underline">
-//         Home
-//       </Link>
-//       <Link to="/product" className="hover:underline">
-//         Product
-//       </Link>
-//       <Link to="/deals" className="hover:underline">
-//         Deals
-//       </Link>
-//       <Link to="/categories" className="hover:underline">
-//         Categories
-//       </Link>
-//       <Link to="/wishlist" className="hover:underline">
-//         Wishlist
-//       </Link>
-
-//       <div className="flex items-center bg-white rounded-full px-3 py-2 w-72">
-//         <FiSearch className="text-gray-500 text-xl" />
-
-//         <input
-//           type="text"
-//           placeholder="What can we help you find?"
-//           className="w-full px-2 outline-none text-black"
-//         />
-//         <IoVolumeMediumOutline className="text-gray-500 text-xl cursor-pointer" />
-//       </div>
-
-//       <Link to="/cart" className="flex items-center gap-2 hover:underline">
-//         <FiShoppingCart className="text-2xl" />
-//         <span>Cart</span>
-//       </Link>
-
-//       <Link to="/checkout" className="hover:underline">
-//         Checkout
-//       </Link>
-
-//       <Link to="/profile" className="flex items-center gap-2 hover:underline">
-//         <FaUser className="text-2xl" />
-//         <span>Profile</span>
-//       </Link>
-
-//       <Link to="/login" className="flex items-center gap-2 hover:underline">
-//         <FiLogIn className="text-2xl" />
-//         <span>Login</span>
-//       </Link>
-      
-//     </nav>
-//   );
-// }
-
-
-
-
-
-
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../assets/bullseye-tm.svg";
@@ -85,7 +13,6 @@ export default function Navbar() {
     <nav className="bg-gray-800 text-white">
       {/* Top Navbar */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-
         {/* Logo */}
         <Link to="/">
           <img
@@ -97,7 +24,6 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-6">
-
           <Link to="/" className="hover:text-red-400">
             Home
           </Link>
@@ -134,7 +60,6 @@ export default function Navbar() {
 
         {/* Desktop Icons */}
         <div className="hidden lg:flex items-center gap-6">
-
           <Link
             to="/cart"
             className="flex items-center gap-2 hover:text-red-400"
@@ -191,7 +116,6 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-gray-700 flex flex-col px-4 py-4 space-y-4">
-
           <Link to="/" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
@@ -242,7 +166,6 @@ export default function Navbar() {
             <FiLogIn />
             Login
           </Link>
-
         </div>
       )}
     </nav>
