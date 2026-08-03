@@ -9,15 +9,15 @@ A responsive Target-inspired e-commerce frontend built with React, Vite, and Tai
 
 ## ✨ Features
 
-- 🛍️ Responsive E-commerce UI
-- 🔍 Product Search
-- 🛒 Add to Cart
-- ❤️ Wishlist
-- 👤 User Profile
-- 📦 Product Categories
-- 💳 Checkout Page
-- 📱 Mobile Friendly Design
-- ⚡ Fast Performance with Vite
+- 🔐 Login form with validation
+- 📝 Profile form validation
+- 📍 Checkout address validation
+- 📱 Fully responsive UI
+- 🧩 Reusable React components
+- 🛒 Cart management
+- ❤️ Wishlist functionality
+- 🔎 Product search
+- 🧭 React Router navigation
 
 ---
 
